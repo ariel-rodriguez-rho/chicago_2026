@@ -1,0 +1,241 @@
+/* =============================================================
+ * Rho Design System — Colors & Type
+ * =============================================================
+ * Source of truth for brand tokens. Values pulled from the
+ * Figma file "Brand DS - 3.1.fig" (/Abridged-Guidelines/149)
+ * and Rho color palette PDFs.
+ * ============================================================= */
+
+/* ---------- Fonts ------------------------------------------- */
+
+/* Degular Display — primary display / headline */
+@font-face { font-family: "Degular Display"; font-style: normal; font-weight: 300; src: url("/fonts/DegularDisplay-Light.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Degular Display"; font-style: normal; font-weight: 400; src: url("/fonts/DegularDisplay-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Degular Display"; font-style: italic; font-weight: 400; src: url("/fonts/DegularDisplay-Italic.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Degular Display"; font-style: normal; font-weight: 500; src: url("/fonts/DegularDisplay-Medium.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Degular Display"; font-style: italic; font-weight: 500; src: url("/fonts/DegularDisplay-MediumItalic.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Degular Display"; font-style: normal; font-weight: 600; src: url("/fonts/DegularDisplay-Semibold.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Degular Display"; font-style: normal; font-weight: 700; src: url("/fonts/DegularDisplay-Bold.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Degular Display"; font-style: normal; font-weight: 900; src: url("/fonts/DegularDisplay-Black.woff2") format("woff2"); font-display: swap; }
+
+/* Degular Mono — small copy, eyebrows, CTAs in ALL CAPS */
+@font-face { font-family: "Degular Mono"; font-style: normal; font-weight: 100 900;
+  src: url("/fonts/DegularMonoVariable.woff2") format("woff2-variations"),
+       url("/fonts/DegularMonoVariable.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Basier Circle — body. Real OTF files, provided by Rho. */
+@font-face { font-family: "Basier Circle"; font-style: normal; font-weight: 400; src: url("/fonts/BasierCircle-Regular.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Basier Circle"; font-style: italic; font-weight: 400; src: url("/fonts/BasierCircle-RegularItalic.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Basier Circle"; font-style: normal; font-weight: 500; src: url("/fonts/BasierCircle-Medium.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Basier Circle"; font-style: italic; font-weight: 500; src: url("/fonts/BasierCircle-MediumItalic.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Basier Circle"; font-style: normal; font-weight: 600; src: url("/fonts/BasierCircle-SemiBold.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Basier Circle"; font-style: italic; font-weight: 600; src: url("/fonts/BasierCircle-SemiBoldItalic.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Basier Circle"; font-style: normal; font-weight: 700; src: url("/fonts/BasierCircle-Bold.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Basier Circle"; font-style: italic; font-weight: 700; src: url("/fonts/BasierCircle-BoldItalic.otf") format("opentype"); font-display: swap; }
+
+:root {
+  --font-display: "Degular Display", "Inter Tight", system-ui, sans-serif;
+  --font-body:    "Basier Circle", "Inter Tight", system-ui, sans-serif; /* Figma "-2% kerning" ≈ letter-spacing: -0.02em */
+  --font-mono:    "Degular Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* ---------- Color — Abyss (near-black greys) -------------- */
+  --abyss-900: #000000;
+  --abyss-800: #0E1111;  /* near-black */
+  --abyss-700: #151716;  /* primary black — the brand's dominant dark */
+  --abyss-600: #212423;
+  --abyss-500: #36393A;  /* derived */
+  --abyss-400: #4A4F4F;
+  --abyss-300: #667070;
+  --abyss-200: #878D8C;
+  --abyss-100: #A9AFAE;  /* derived */
+
+  /* ---------- Color — Moon (nuanced warm whites) ------------ */
+  --moon-0:   #FFFFFF;
+  --moon-50:  #F6F8F8;
+  --moon-100: #F2F4F4;
+  --moon-200: #EEF2F1;  /* primary warm white — use instead of pure white for bg */
+  --moon-300: #E1F1FA;  /* the token says E1F1FA — slightly cool */
+  --moon-400: #AFBCBC;
+  --moon-500: #81A5A9;  /* derived */
+
+  /* ---------- Color — Mist (muted warm greys) --------------- */
+  --mist-100: #D9E4E5;
+  --mist-200: #AFDFD4;
+  --mist-300: #81A5A9;
+  --mist-400: #678487;  /* the grey referenced in Figma metadata */
+  --mist-500: #4E6366;
+
+  /* ---------- Color — Caribbean (teal — THE brand pop) ------ */
+  --caribbean-50:  #E6FDF9;
+  --caribbean-100: #CDFBF2;
+  --caribbean-200: #9CF7E6;
+  --caribbean-300: #6AF3D9;  /* primary teal accent */
+  --caribbean-400: #39EFCD;
+  --caribbean-500: #07EBC0;  /* vivid pop */
+  --caribbean-600: #06D4AD;  /* derived */
+  --caribbean-700: #05A689;  /* derived */
+  --caribbean-800: #045F4E;  /* derived */
+  --caribbean-900: #022F27;  /* derived */
+
+  /* ---------- Color — Tertiary support ----------------------- */
+  /* Used sparingly; rarely touch these unless the context calls for warmth. */
+  --amber-500:  #FFB829;  /* amber / "sunrise" accent, see Figma metadata */
+  --amber-100:  #FFEDC4;
+  --ember-500:  #E25B3A;  /* warm contrast — used in some merch */
+  --plum-500:   #6F5CFF;  /* rare digital accent */
+
+  /* ---------- Semantic aliases ------------------------------ */
+  --bg:            var(--moon-200);    /* page background — warm off-white */
+  --bg-inverse:    var(--abyss-700);   /* dark mode / hero bg */
+  --surface:       var(--moon-0);
+  --surface-muted: var(--moon-100);
+  --surface-inverse: var(--abyss-600);
+
+  --fg:            var(--abyss-700);   /* primary text on light bg */
+  --fg-muted:      var(--mist-400);    /* secondary text */
+  --fg-subtle:     var(--mist-300);    /* tertiary / metadata */
+  --fg-inverse:    var(--moon-200);    /* primary text on dark bg */
+  --fg-inverse-muted: var(--moon-400);
+
+  --accent:        var(--caribbean-300);
+  --accent-soft:   var(--caribbean-100);
+  --accent-ink:    var(--caribbean-900);
+  --accent-vivid:  var(--caribbean-500);
+
+  --border:        var(--mist-100);
+  --border-strong: var(--mist-300);
+  --border-inverse: var(--abyss-500);
+
+  /* ---------- Radius ---------------------------------------- */
+  --radius-xs: 4px;      /* smallest interior elements */
+  --radius-sm: 8px;      /* cards, modals */
+  --radius-md: 16px;     /* hero titles, large containers */
+  --radius-lg: 24px;     /* larger hero surfaces */
+  --radius-xl: 32px;     /* display surfaces, marquee tiles */
+  --radius-pill: 999px;
+
+  /* ---------- Spacing (4-based) ----------------------------- */
+  --s-0: 0;
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+  --s-32: 128px;
+
+  /* ---------- Shadow / Elevation ---------------------------- */
+  --shadow-xs: 0 1px 2px rgba(14, 17, 17, 0.06);
+  --shadow-sm: 0 2px 6px rgba(14, 17, 17, 0.06), 0 1px 2px rgba(14, 17, 17, 0.04);
+  --shadow-md: 0 8px 24px rgba(14, 17, 17, 0.08), 0 2px 6px rgba(14, 17, 17, 0.04);
+  --shadow-lg: 0 24px 48px rgba(14, 17, 17, 0.12), 0 8px 16px rgba(14, 17, 17, 0.06);
+  --shadow-glow: 0 0 0 4px rgba(7, 235, 192, 0.18);      /* focus / accent ring */
+  --shadow-inset: inset 0 1px 0 rgba(255,255,255,0.08);   /* for dark surfaces */
+
+  /* ---------- Motion ---------------------------------------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --dur-xs: 120ms;
+  --dur-sm: 180ms;
+  --dur-md: 260ms;
+  --dur-lg: 420ms;
+
+  /* ---------- Type scale (light-bg default) ----------------- */
+  --tracking-display: 0.005em;    /* Degular Display — near zero */
+  --tracking-body:    -0.02em;     /* Basier Circle — −2% per brand */
+  --tracking-mono:    0.08em;      /* Degular Mono — widened for caps */
+}
+
+/* ---------- Base reset + body default ------------------------ */
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: var(--tracking-body);
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Type roles --------------------------------------- */
+/* Display (Degular Display Medium) — hero, marquee */
+.t-display-xl { font-family: var(--font-display); font-weight: 500; font-size: clamp(72px, 9vw, 168px); line-height: 0.85; letter-spacing: 0.02em; }
+.t-display-lg { font-family: var(--font-display); font-weight: 500; font-size: clamp(56px, 6.5vw, 104px); line-height: 0.9;  letter-spacing: 0.01em; }
+.t-display    { font-family: var(--font-display); font-weight: 500; font-size: clamp(44px, 4.5vw, 72px);  line-height: 0.95; letter-spacing: 0.005em; }
+
+/* Headings (Degular Display) */
+.t-h1 { font-family: var(--font-display); font-weight: 500; font-size: 56px; line-height: 1.02; letter-spacing: -0.01em; }
+.t-h2 { font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 1.05; letter-spacing: -0.01em; }
+.t-h3 { font-family: var(--font-display); font-weight: 500; font-size: 32px; line-height: 1.1;  letter-spacing: -0.005em; }
+.t-h4 { font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 1.15; letter-spacing: 0; }
+
+/* Product headlines (Degular Display Semibold + 2% tracking) — use on
+   metric cards, account balances, KPI values, and any headline inside
+   product UI surfaces. Marketing headlines continue to use .t-h*. */
+.t-product-xl { font-family: var(--font-display); font-weight: 600; font-size: 48px; line-height: 1;    letter-spacing: 0.02em; }
+.t-product-lg { font-family: var(--font-display); font-weight: 600; font-size: 34px; line-height: 1;    letter-spacing: 0.02em; }
+.t-product-md { font-family: var(--font-display); font-weight: 600; font-size: 24px; line-height: 1.1;  letter-spacing: 0.02em; }
+.t-product-sm { font-family: var(--font-display); font-weight: 600; font-size: 18px; line-height: 1.15; letter-spacing: 0.02em; }
+
+/* Body (Basier Circle → Inter Tight) */
+.t-lead { font-family: var(--font-body); font-weight: 400; font-size: 20px; line-height: 1.45; letter-spacing: var(--tracking-body); color: var(--fg-muted); }
+.t-body { font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 1.55; letter-spacing: var(--tracking-body); }
+.t-body-sm { font-family: var(--font-body); font-weight: 400; font-size: 14px; line-height: 1.5; letter-spacing: var(--tracking-body); }
+.t-caption { font-family: var(--font-body); font-weight: 400; font-size: 12px; line-height: 1.4; letter-spacing: 0; color: var(--fg-muted); }
+
+/* Mono (Degular Mono — ALL CAPS, eyebrows, labels, small ctas) */
+.t-eyebrow { font-family: var(--font-mono); font-weight: 500; font-size: 11px; line-height: 1; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-muted); }
+.t-label { font-family: var(--font-mono); font-weight: 500; font-size: 12px; line-height: 1; letter-spacing: 0.08em; text-transform: uppercase; }
+.t-mono  { font-family: var(--font-mono); font-weight: 400; font-size: 13px; line-height: 1.4; letter-spacing: 0.02em; }
+
+/* ---------- HTML element defaults (can be used directly) ----- */
+h1 { font-family: var(--font-display); font-weight: 500; font-size: 56px; line-height: 1.02; letter-spacing: -0.01em; margin: 0 0 var(--s-4); }
+h2 { font-family: var(--font-display); font-weight: 500; font-size: 40px; line-height: 1.05; letter-spacing: -0.01em; margin: 0 0 var(--s-4); }
+h3 { font-family: var(--font-display); font-weight: 500; font-size: 32px; line-height: 1.1;  letter-spacing: -0.005em; margin: 0 0 var(--s-3); }
+h4 { font-family: var(--font-display); font-weight: 500; font-size: 24px; line-height: 1.15; margin: 0 0 var(--s-3); }
+p  { margin: 0 0 var(--s-4); letter-spacing: var(--tracking-body); }
+code, pre { font-family: var(--font-mono); font-size: 0.95em; }
+small { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; }
+
+/* =============================================================
+ * Page-level globals (from the original inline <style>)
+ * ============================================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --warm: #F8F8F5;
+  --warm-alt: #EEF2F1;
+  --ink: #151716;
+  --ink-2: #2F3534;
+  --muted: #4E6366;
+  --subtle: #678487;
+  --line: rgba(21, 23, 22, 0.08);
+  --line-strong: rgba(21, 23, 22, 0.16);
+  --teal: #07EBC0;
+  --teal-soft: #6AF3D9;
+  --teal-ink: #022F27;
+  --place: #E25B3A;      /* Chicago place accent (ember) */
+  --card: #FFFFFF;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--warm);
+  color: var(--ink);
+  letter-spacing: var(--tracking-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: var(--teal-soft); color: var(--ink); }
+a { color: inherit; }
