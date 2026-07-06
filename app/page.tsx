@@ -195,7 +195,7 @@ export default function Page() {
                 <div className={styles.Er}>
                   <span className={styles.lab}>Hosts</span>
                   <span>
-                    Hosted by Danny Goodman (Density Collective) &amp; Dylan Johnson + Cristian
+                    Hosted by Danny Goodman (Superior Studios) &amp; Dylan Johnson + Cristian
                     Raygoza (Rho) · 15 portfolio founders
                   </span>
                 </div>
@@ -335,7 +335,7 @@ export default function Page() {
               </div>
               <div className={styles.Hin}>
                 <div className={styles.Hn}>Danny Goodman</div>
-                <div className={styles.Hr}>Density Collective</div>
+                <div className={styles.Hr}>Superior Studios</div>
               </div>
               <div className={styles.Hl}>LinkedIn ↗</div>
             </a>
