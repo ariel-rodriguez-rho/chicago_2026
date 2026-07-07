@@ -181,7 +181,7 @@ export default function Page() {
                 <span className={styles.Eb}>Founder Dinner</span>
               </div>
               <h3>
-                Rho <span>×</span> Density Collective x Superior Studios
+                Rho <span>×</span> Superior Studios
               </h3>
               <div className={styles.Eds}>
                 <div className={styles.Er}>
