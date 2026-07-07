@@ -62,7 +62,7 @@ export default function Page() {
               <span className={styles.pp}>D</span> Drive Capital
             </a>
             <a href="https://www.rho.co/partner/superior-studios" target="_blank">
-              <span className={styles.pp}>D</span> Density Collective x Superior Studios
+              <span className={styles.pp}>D</span> Superior Studios
             </a>
             <a href="https://www.rho.co/partner/longjump" target="_blank">
               <span className={styles.pp}>L</span> Long Jump Capital
@@ -439,7 +439,7 @@ export default function Page() {
               target="_blank"
               className={styles.Rl}
             >
-              <span className={styles.Rn}>Rho × Density Collective x Superior Studios</span>
+              <span className={styles.Rn}>Rho × Superior Studios</span>
               <span className={styles.Rc}>View Offer ↗</span>
             </a>
             <a href="https://www.rho.co/partner/longjump" target="_blank" className={styles.Rl}>
